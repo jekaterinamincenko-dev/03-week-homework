@@ -177,5 +177,5 @@ if __name__ == "__main__":
     print(is_valid_date("20-05-2024"))  # False
 
     # Import
-    import validators
-print(validators.is_email("yeka@inbox.lv"))
+from validators import is_email, is_phone_number
+print(is_email('yeka@inbox.lv'))  # True
