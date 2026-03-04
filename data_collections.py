@@ -63,3 +63,29 @@ for vārds, balle in studenti.items():
         max_balle = balle
         best_vārds = vārds
 print(f"Students ar augstāko atzīmi: {best_vārds} ({max_balle})!")   
+# C daļa — Kombinācija
+  ## Izveido sarakstu ar vārdnīcām
+empty_dict_list = []
+print(empty_dict_list)
+studentu_saraksts = [
+    {"name": "Aiga", "grade": 92},
+    {"name": "Žanis", "grade": 85},
+    {"name": "Inna", "grade": 79},
+    {"name": "Artūrs", "grade": 100},
+    {"name": "Baiba", "grade": 82}
+]
+print("Studentu saraksts:")
+print(studentu_saraksts)
+for studenti in studentu_saraksts:
+    name = studenti["name"]
+    grade = studenti["grade"]
+    print(f"{name}: {grade}")
+  ## Filtrē: tikai studenti ar atzīmi >= 80
+top_studenti = []
+for studenti in studentu_saraksts:
+    if studenti["grade"] >= 90:
+        top_studenti.append(studenti)
+print("Labākie studenti:")
+print(top_studenti)
+for indekss, studenti in enumerate(top_studenti, start=1):
+    print(f"{indekss}. {studenti['name']} — {studenti['grade']}")
